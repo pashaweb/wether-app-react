@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import SearchResult from './Components/multiselector/SearchResultText';
+import SearchResultsList from './Components/SearchResultsList';
 
 
 function ButtonCount(props: { setCount: (count: number) => void; setCountF: (count: number) => number; count: number }) {
@@ -26,6 +28,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <SearchResult resultText="blal lala a;a;" searchQuery="lal" />
+      <SearchResultsList searchResults={[{ id: "1", resultText: "blal lala a;a;" }, { id: "2", resultText: "blal lala a;a;" }]} searchQuery="lal" />
     </div>
   )
 }

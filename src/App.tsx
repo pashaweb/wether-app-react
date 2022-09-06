@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import SearchBox from './Components/multiselector/SearchBox';
 import SearchResult from './Components/multiselector/SearchResultText';
 import SearchResultsList from './Components/SearchResultsList';
 
@@ -30,6 +31,7 @@ function App() {
       </p>
       <SearchResult resultText="blal lala a;a;" searchQuery="lal" />
       <SearchResultsList searchResults={[{ id: "1", resultText: "blal lala a;a;" }, { id: "2", resultText: "blal lala a;a;" }]} searchQuery="lal" />
+      <SearchBox onSearch={(e) => console.log(e)} placeholder="search" />
     </div>
   )
 }

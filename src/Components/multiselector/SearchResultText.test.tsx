@@ -10,6 +10,7 @@ describe('should ', () => {
       const {container} = render(<SearchResult resultText="searchText" searchQuery="underlineText" />);
       expect(screen.queryAllByText(/searchText/i)).toHaveLength(1);
       const spans = container.querySelectorAll('span');
+      console.log(spans);
       expect(spans).toHaveLength(0);
    });
    it('should have underline',async () => {

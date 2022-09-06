@@ -16,7 +16,7 @@ function SearchBox({ onSearch, placeholder }: SearchBoxProps): JSX.Element  {
       <input
         type="text"
         placeholder={placeholder}
-        value={searchText}
+        value={searchText} 
         onChange={handleSearch}
       />
       <SearchResultsList 

@@ -11,3 +11,10 @@ export interface SearchResultListItemProps {
     id: string;
     resultText: string;
 }
+
+export interface SearchBoxProps { 
+    placeholder: string;
+    onSearch: CallbackFunctionVariadicAnyReturn;
+}
+
+type CallbackFunctionVariadicAnyReturn = (...args: any[]) => any;

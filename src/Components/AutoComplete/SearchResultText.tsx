@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { SearchResultProps } from "./multiselector-types";
+import { SearchResultProps } from "./autocomplete-types";
 
 function SearchResult({resultText, searchQuery}: SearchResultProps) {
     const [resultTextState, setSearchTextState] = useState("");

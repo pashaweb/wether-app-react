@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import SearchBox from './Components/multiselector/SearchBox';
-import SearchResult from './Components/multiselector/SearchResultText';
-import SearchResultsList from './Components/SearchResultsList';
+import { SearchBoxProps } from './Components/AutoComplete/autocomplete-types';
+import SearchBox from './Components/AutoComplete/SearchBox';
 
 
 // function ButtonCount(props: { setCount: (count: number) => void; setCountF: (count: number) => number; count: number }) {
@@ -15,13 +14,18 @@ import SearchResultsList from './Components/SearchResultsList';
 function App() {
   // const setCountF = (count: number): number => count + 4;
   // const [count, setCount] = useState(10)
+  const searchBoxProps:SearchBoxProps = {
+    onSearch: (
+      searchText:string) => console.log(searchText), 
+    placeholder: "search", 
+    lableText: "search for location",
+    searchResults: []
+  };
 
   return (
     <div className="App"  >
       <h1>Vite + React</h1>
-      <SearchResult resultText="blal lala a;a;" searchQuery="lal" />
-      <SearchResultsList searchResults={[{ id: "1", resultText: "blal lala a;a;" }, { id: "2", resultText: "blal lala a;a;" }]} searchQuery="lal" />
-      <SearchBox onSearch={(e) => console.log(e)} placeholder="search" />
+      <SearchBox {...searchBoxProps} />
     </div>
   )
 }

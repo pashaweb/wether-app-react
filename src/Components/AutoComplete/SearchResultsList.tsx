@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { SearchResultListProps } from "./multiselector/multiselector-types";
-import SearchResult from "./multiselector/SearchResultText";
+import { SearchResultListProps } from "./autocomplete-types";
+import SearchResult from "./SearchResultText";
 
 function SearchResultsList({searchResults, searchQuery}: SearchResultListProps):JSX.Element {
   const [resultsState, setResultsState] = useState(searchResults);

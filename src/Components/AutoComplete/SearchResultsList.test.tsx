@@ -1,8 +1,8 @@
 /** @jest-environment jsdom */
 import React from 'react';
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import SearchResultsList from './SearchResultsList';
-import { SearchResultListProps } from './multiselector/multiselector-types';
+import { SearchResultListProps } from './autocomplete-types';
 
 const searchResultListProps: SearchResultListProps = {
   searchResults: [{
